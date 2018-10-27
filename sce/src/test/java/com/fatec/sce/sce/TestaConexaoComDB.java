@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 import com.fatec.sce.model.ConfiguraDB;
 import com.fatec.sce.model.FabricaDeConexoes;
+import com.mysql.jdbc.Connection;
 
 public class TestaConexaoComDB {
 	/**
@@ -14,11 +15,15 @@ public class TestaConexaoComDB {
 	@Test
 	public void quandoConectaComOBancoRetornaOK() {
 		// cenario
-		FabricaDeConexoes fabrica;
-		// acao
-		fabrica = new FabricaDeConexoes();
-		// verificacao
-		assertNotNull(fabrica.getConnection());
+		Connection c = null;
+		try {
+			// acao
+			c = new FabricaDeConexoes().getConnection();
+			// verificacao
+			assertNotNull(c);
+		} catch (Exception e) {
+			fail("nao deveria falhar");
+		}
 	}
 
 	/**
@@ -46,13 +51,13 @@ public class TestaConexaoComDB {
 					"java.sql.SQLException: Access denied for user 'roo123t'@'localhost' (using password: YES)");
 		}
 	}
-	
+
 	@Test
 	public void quandoConectaComUsuarioInvalido_SQLException() {
 		String url = "jdbc:mysql://localhost:3306/biblioteca";
 		String driver = "com.mysql.jdbc.Driver";
-		String usuario = "root123"; //usuário errado
-		String senha = "alunofatec"; 
+		String usuario = "root123"; // usuário errado
+		String senha = "alunofatec";
 		FabricaDeConexoes fabricaDeConexoes = null;
 		ConfiguraDB configuraDB = new ConfiguraDB(url, driver, usuario, senha);
 		fabricaDeConexoes = new FabricaDeConexoes(configuraDB);

@@ -9,6 +9,7 @@ import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
 
 public class LivroDAO implements ILivroDAO {
+
 	Logger logger = Logger.getLogger(LivroDAO.class);
 
 	public int adiciona(Livro livro) {

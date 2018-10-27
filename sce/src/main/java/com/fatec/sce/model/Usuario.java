@@ -1,6 +1,7 @@
 package com.fatec.sce.model;
 
 public class Usuario {
+	
 	private String ra;
 	private String nome;
 

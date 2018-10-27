@@ -7,6 +7,7 @@ import com.fatec.sce.model.FabricaDeConexoes;
 import com.mysql.jdbc.Connection;
 
 public class TestaConexaoComDB {
+	
 	/**
 	 * Objetivo - verificar o comportamento do sistema na conexao ao DB com
 	 * configuracao valida Pré-condição - a configuracao default da fabrica de

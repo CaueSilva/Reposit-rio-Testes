@@ -11,4 +11,5 @@ public class MySQLDAOFactory extends DAOFactory {
 	public ILivroDAO getLivroDAO() {
 		return new LivroDAO();
 	}
+	
 }

@@ -8,10 +8,11 @@ import com.mysql.jdbc.exceptions.jdbc4.CommunicationsException;
 
 public class FabricaDeConexoes {
 
+	
 	private String url = "jdbc:mysql://localhost:3306/biblioteca";
 	private String driver = "com.mysql.jdbc.Driver";
 	private String usuario = "root";
-	private String senha = "";
+	private String senha = "alunofatec";
 	Logger logger = Logger.getLogger(FabricaDeConexoes.class);
 
 	public FabricaDeConexoes(ConfiguraDB configura) {

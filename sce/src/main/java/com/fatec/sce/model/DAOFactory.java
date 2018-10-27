@@ -2,6 +2,7 @@ package com.fatec.sce.model;
 
 public abstract class DAOFactory {
 
+	
 	// List of DAO types supported by the factory
 	public static final int MYSQL = 1;
 	public static final int ORACLE = 2;

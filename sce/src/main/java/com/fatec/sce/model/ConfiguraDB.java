@@ -7,6 +7,7 @@ public class ConfiguraDB {
 	String usuario = "";
 	String senha = "";
 
+	
 	public ConfiguraDB(String url, String driver, String usuario, String senha) {
 		this.url = url;
 		this.driver = driver;

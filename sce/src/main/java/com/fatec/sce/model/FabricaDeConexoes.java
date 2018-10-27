@@ -9,7 +9,7 @@ import com.mysql.jdbc.exceptions.jdbc4.CommunicationsException;
 public class FabricaDeConexoes {
 
 	
-	private String url = "jdbc:mysql://localhost:3306/biblioteca";
+	private String url = "jdbc:mysql://localhost:3306/biblioteca?useSSL=false";
 	private String driver = "com.mysql.jdbc.Driver";
 	private String usuario = "root";
 	private String senha = "alunofatec";
